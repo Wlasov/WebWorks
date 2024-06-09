@@ -1,7 +1,7 @@
 function task1()
 {
   let yourName = "Nikolay";
-  alert(yourName);
+  alert(`${yourName}, length = ${yourName.length}`);
 }
 
 function task2()
@@ -9,95 +9,116 @@ function task2()
   let num1 = 3;
   let num2 = 5;
   let sum = num1 + num2;
-  alert(sum);
+  alert(`${num1} + ${num2} = ${sum}`);
 }
 
 function task3()
 {
-  let _num1 = 16;
-  let _num2 = 2;
-  let quotient = _num1 / _num2;
-  let result = confirm(`Результат деления 16 на 2: ${quotient}`);
+  let num1 = 16;
+  let num2 = 2;
+  let result = num1 / num2;
+  confirm(`${num1} / ${num2} = ${result}`);
 }
 
 function task4()
 {
   let age = 25;
-  console.log(age);
+  console.log(`task #4: ${age}`);
+  alert(`console logged`);
 }
 
 function task5()
 {
-  let word = prompt("Введите любое слово:");
-  let wordLength = word.length;
-  console.log(`Длина слова: ${wordLength}`);
-  console.log(`Первые две буквы слова: ${word.substring(0, 2)}`);
+  let word = prompt("Type any word:");
+  console.log(`Task #5: ${word} length is: ${word.length}`);
+  console.log(`Task #5: ${word} substring(0,2) is: ${word.substring(0, 2)}`);
 }
 
 function task6()
 {
-  let momAge = parseInt(prompt("Введите возраст матери:"));
-  let dadAge = parseInt(prompt("Введите возраст отца:"));
+  let momAge = parseInt(prompt("Type mom age:"));
+  let dadAge = parseInt(prompt("Type dad age:"));
   
   if (momAge > dadAge) {
-    console.log("Мать старше");
+    alert("Mom is older");
   } else if (dadAge > momAge) {
-    console.log("Отец старше");
+    alert("Dad is older");
   } else {
-    console.log("Они имеют одинаковый возраст");
+    alert("They are the same age");
   }
 }
 
 function task7()
 {
-  let childAge = parseInt(prompt("Сколько лет ребенку?"));
+  let childAge = parseInt(prompt("How old is kid?"));
   if (childAge >= 12) {
-    console.log("Вперед за билетами!");
+    alert("Go ahead and get your tickets!");
   } else {
-    console.log("Сиди дома!");
+    alert("Сиди дома!");
 }
 }
 
 function task8()
 {
-  let number = parseInt(prompt("Введите число:"));
-  let square = number * number;
-  alert(`Квадрат числа ${number} равен ${square}`);
+  function square(number)
+  {
+    return number * number;
+  }
+
+  let number = parseInt(prompt("Type any number:"));
+  let s = square(number);
+  alert(`Square of ${number} is ${s}`);
 }
 
 function task9()
 {
-  let userName = prompt("Введите ваше имя:");
-  alert(`Доброго здоровечка, ${userName}`);
+  function greating(name)
+  {
+    alert(`Greating, ${name}!`);
+  }
+
+  greating("Nikolay");
 }
 
 function task10()
 {
-  let number = parseInt(prompt("Введите число:"));
-  if (number % 4 === 0) {
-    alert("Выражение истинно");
+  function divFour(number)
+  {
+    return number % 4;
+  }
+
+  let number = parseInt(prompt("Type any number:"));
+  if (divFour(number) === 0) {
+    alert("True");
   } else {
-    alert("Выражение ложно");
+    alert("False");
   }
 }
 
 function task11()
 {
-  let perimeter = 2 * (a + b);
-  alert(`Периметр прямоугольника равен ${perimeter}`);
+  function perimeter(length, width)
+  {
+    return 2 * (length + width);
+  }
+
+  let length = parseFloat(prompt("Type length:"));
+  let width = parseFloat(prompt("Type with:"));
+
+  alert(`Perimeter is: ${perimeter(length, width)}`);
 }
 
 function task12()
 {
   for (let i = 1; i <= 10; i++) {
-    console.log(i);
+    console.log(`Task #12: ${i}`);
   }
 }
 
 function task13()
 {
   for (let i = 5; i <= 50; i += 5) {
-    console.log(i);
+    console.log(`Task #13: ${i}`);
   }
 }
 
@@ -105,7 +126,7 @@ function task14()
 {
   let i = 1;
   while (i <= 10) {
-    console.log(i);
+    console.log(`Task #14: ${i}`);
     i++;
   }
 }
@@ -114,7 +135,7 @@ function task15()
 {
   let i = 5;
   while (i <= 50) {
-    console.log(i);
+    console.log(`Task #15: ${i}`);
     i += 5;
   }
 }
@@ -123,49 +144,49 @@ function task16()
 {
   let i = 5;
   do {
-    console.log("Нас не задушишь, не убьешь");
+    console.log("You won't strangle us, you won't kill us");
   } while (i < 1);
 }
 
 function task17()
 {
-  let order = prompt("Выберите, что вы хотите заказать: яблоко, апельсин, сок, пиво");
+  let order = prompt("Choose what you want to order: apple, orange, juice, beer");
 
   switch (order) {
-    case "яблоко":
-      console.log(`Ваш выбор яблоко - просто идеален`);
+    case "apple":
+      console.log(`Task #17: Your choice of apple is simply perfect`);
       break;
-    case "апельсин":
-      console.log(`Ваш выбор апельсин - просто идеален`);
+    case "orange":
+      console.log(`Task #17: Your choice of orange is simply perfect`);
       break;
-    case "сок":
-      console.log(`Ваш выбор сок - просто идеален`);
+    case "juice":
+      console.log(`Task #17: Your choice of juice is simply perfect`);
       break;
-    case "пиво":
-      console.log(`Ваш выбор пиво - просто идеален`);
+    case "beer":
+      console.log(`Task #17: Your choice of beer is simply perfect`);
       break;
     default:
-      console.log("Пошел прочь!"); 
+      console.log("Task #17: Go away!"); 
   }
 }
 
 function task18()
 {
   let myArray = ["apple", "banana", "orange", "grape", "pear"];
-  console.log(myArray[2]);
+  console.log(`Task #18: ${myArray[2]}`);
 }
 
 function task19()
 {
   let myArray = ["apple", "banana", "orange", "grape", "pear"];
-  console.log(myArray.length);
+  console.log(`Task #19: ${myArray.length}`);
 }
 
 function task20()
 {
   let myArray = ["apple", "banana", "orange", "grape", "pear"];
   for (let i = 0; i < myArray.length; i++) {
-    console.log(myArray[i]);
+    console.log(`Task #20: ${myArray[i]}`);
   }
 }
 
@@ -180,10 +201,10 @@ function task21()
   for (let i = 0; i < myArray.length; i++) {
     if (Array.isArray(myArray[i])) {
       for (let j = 0; j < myArray[i].length; j++) {
-        console.log(myArray[i][j]);
+        console.log(`Task 21: ${myArray[i][j]}`);
       }
     } else {
-      console.log(myArray[i]);
+      console.log(`Task 21: ${myArray[i]}`);
     }
   }
 }
@@ -191,24 +212,38 @@ function task21()
 function task22()
 {
   let phoneBook = {
-    "ФИО": "Иванов Иван Иванович",
-    "телефонный номер": "8-900-123-45-67"
+    "FullName": "Nikolay Wlasov",
+    "PhoneNumber": "8-900-123-45-67"
   };
   
-  console.log(phoneBook["ФИО"]);
-  console.log(phoneBook["телефонный номер"]);
+  console.log(`Task #22: Full name is: ${phoneBook["FullName"]}`);
+  console.log(`Task #22: Phone number is: ${phoneBook["PhoneNumber"]}`);
 }
 
 function task23()
 {
   let person = new Object();
-  person.name = "Иван";
-  person.surname = "Иванов";
-  person.age = 30;
-  person.city = "Москва";
-  person.country = "Россия";
+  person.name = "Nikolay";
+  person.surname = "Wlasov";
+  person.age = 21;
+  person.city = "Kolomna";
+  person.country = "Russia";
   
   for (let prop in person) {
-    console.log(prop + ": " + person[prop]);
+    console.log(`Task #23: ${prop}`);
+  }
+}
+
+function task24()
+{
+  let person = new Object();
+  person.name = "Nikolay";
+  person.surname = "Wlasov";
+  person.age = 21;
+  person.city = "Kolomna";
+  person.country = "Russia";
+  
+  for (let prop in person) {
+    console.log(`Task #24: ${person[prop]}`);
   }
 }
